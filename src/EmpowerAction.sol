@@ -1,54 +1,45 @@
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-
-contract ServiceToken is ERC20 {
-    constructor(uint256 initialSupply) ERC20("ServiceToken", "STKN") {
-        _mint(msg.sender, initialSupply);
-    }
-}
-
-contract ServiceExchange {
-    ServiceToken public token;
+contract JobMarket {
+    enum JobStatus { Available, InProgress, Completed }
 
     struct Job {
-        address owner;
-        string name;
+        address client;
         uint256 price;
-        address worker;
-        bool completed;
+        string name;
+        JobStatus status;
     }
 
-    mapping(address => bool) public registeredUsers;
-    mapping(address => Job[]) public availableJobs;
-    mapping(address => Job[]) public takenJobs;
+    mapping(uint256 => Job) public jobs;
+    uint256 public jobCount;
 
-    constructor(address _token) {
-        token = ServiceToken(_token);
+    constructor() {
+        jobCount = 0;
     }
 
-    function registerUser() public {
-        registeredUsers[msg.sender] = true;
+    function postJob(string memory _name, uint256 _price) public {
+        jobs[jobCount++] = Job(msg.sender, _price, _name, JobStatus.Available);
     }
 
-    function addJob(string memory _name, uint256 _price) public {
-        require(registeredUsers[msg.sender], "You must be registered");
-        availableJobs[msg.sender].push(Job(msg.sender, _name, _price, address(0), false));
+    function startJob(uint256 _jobId) public {
+        require(jobs[_jobId].status == JobStatus.Available, "Job not available");
+        jobs[_jobId].status = JobStatus.InProgress;
     }
 
-    function takeJob(address _owner, uint256 _index) public {
-        require(registeredUsers[msg.sender], "You must be registered");
-        Job storage job = availableJobs[_owner][_index];
-        require(token.transferFrom(msg.sender, address(this), job.price), "Transfer failed");
-        job.worker = msg.sender;
-        takenJobs[msg.sender].push(job);
+    function completeJob(uint256 _jobId) public {
+        require(jobs[_jobId].status == JobStatus.InProgress, "Job not in progress");
+        jobs[_jobId].status = JobStatus.Completed;
     }
 
-    function completeJob(address _worker, uint256 _index) public {
-        Job storage job = takenJobs[_worker][_index];
-        require(msg.sender == job.owner, "Not the owner");
-        require(token.transfer(job.worker, job.price), "Transfer failed");
-        job.completed = true;
+    function getJobStatus(uint256 _jobId) public view returns (JobStatus) {
+        return jobs[_jobId].status;
     }
+    
+    function getJob(uint256 _jobId) public view returns (address, uint256, string memory, JobStatus) {
+    Job memory job = jobs[_jobId];
+    return (job.client, job.price, job.name, job.status);
 }
+}
+
 
