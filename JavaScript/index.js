@@ -1,3 +1,4 @@
+const felipe = 123
 const sections = {
     work: document.querySelector(".work__active"),
     talent: document.querySelector(".talent__active"),
