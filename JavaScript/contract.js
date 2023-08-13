@@ -1,6 +1,6 @@
 document.getElementById('connectMetamaskButton').addEventListener('click', async () => {
   if (typeof window.ethereum !== 'undefined') {
-    window.web3 = new Web3(window.ethereum);
+    window.web3 = new Web3('http://127.0.0.1:8545');
   } else {
     alert("Metamask no instalado. Instalelo para continuar");
     return;
@@ -26,23 +26,25 @@ function displayAccountNumber(account) {
 
 
 
-function initializeContract(userAddress) {
-  const contractABI = []; // ABI from your compiled contract
-  const contractAddress = '0x...'; // Contract address
-  const contract = new window.web3.eth.Contract(contractABI, contractAddress);
+async function initializeContract() {
+  const contractABIRequest = await fetch('../out/EmpowerAction.sol/JobMarket.json'); // ABI from your compiled contract
+  const contractABI = await contractABIRequest.json();
+  console.log(contractABI); 
+  const contractAddress = '0x5FbDB2315678afecb367f032d93F642f64180aa3';// Contract address
+  console.log('--------Web3---', window.web3.eth)
+  const contract = new window.web3.eth.Contract(contractABI["abi"], contractAddress);
 
-  contract.methods.YourFunction().call().then(result => {
-    console.log('Result:', result);
-  });
+  const jobStatus = await contract.methods.getJobStatus(0).call();
+  console.log('Result:', jobStatus );
 
-  contract.methods.YourFunction(parameters).send({ from: userAddress })
-    .on('transactionHash', hash => console.log('Transaction Hash:', hash))
-    .on('confirmation', (confirmationNumber, receipt) => console.log('Confirmation:', confirmationNumber))
-    .on('error', console.error);
-
-  contract.events.YourEvent()
-    .on('data', event => console.log('Event:', event))
-    .on('error', console.error);
+//  contract.methods.YourFunction(parameters).send({ from: userAddress })
+//    .on('transactionHash', hash => console.log('Transaction Hash:', hash))
+//    .on('confirmation', (confirmationNumber, receipt) => console.log('Confirmation:', confirmationNumber))
+//    .on('error', console.error);
+//
+//  contract.events.YourEvent()
+//    .on('data', event => console.log('Event:', event))
+//    .on('error', console.error);
 }
 
 
