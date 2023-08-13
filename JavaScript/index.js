@@ -50,3 +50,9 @@ pay.addEventListener("click", () => {buttonPay.style.display = "flex"});
 exitPay.addEventListener("click", () => {buttonPay.style.display = "none"});
 
 
+const reg = document.getElementById("register");
+const ventanita = document.querySelector(".ventanita");
+
+reg.addEventListener("click", () => {
+    ventanita.style.display = "flex"
+});

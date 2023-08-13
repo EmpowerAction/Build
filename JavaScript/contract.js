@@ -25,7 +25,6 @@ function displayAccountNumber(account) {
 }
 
 
-
 async function initializeContract() {
   const contractABIRequest = await fetch('../out/EmpowerAction.sol/JobMarket.json'); // ABI from your compiled contract
   const contractABI = await contractABIRequest.json();
