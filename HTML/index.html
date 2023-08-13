@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -53,8 +54,8 @@
           <!-- Input Section -->
 
           <div class="input__nav__search">
-            <input type="text" placeholder="Say Something..." /><span
-              class="material-icons-sharp se"
+            <input type="text" id="send" placeholder="Say Something..." /><span
+              class="material-icons-sharp se" onclick="search()"
               >search</span
             >
           </div>
@@ -84,6 +85,8 @@
       <!-- Body Structure -->
 
       <!-- Body Message -->
+
+      <button id="post__job">publicar</button>
       
       <main>
 
@@ -94,12 +97,21 @@
               Empoderando la accion <span>Colectiva</span>
             </h1>
             <div class="links__hero">
-              <a href="" class="button-85">Registrar Tu Cuenta</a>
+              <a href="#" class="button-85"  id="register">Registrar Tu Cuenta</a>
               <a href="" class="button-85">Conectar</a>
+            </div>
+          </div>
+          <div class="ventanita">
+            <div class="ventanita2">
+              <input type="text" placeholder="Nombre">
+              <button class="send__name">Enviar</button>
             </div>
           </div>
           <div class="hero__presentation"></div>
         </div>
+
+
+
 
         <!-- Sidebar Section -->
 

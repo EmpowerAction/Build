@@ -442,6 +442,42 @@ h4 {
   border-radius: 10px;
 }
 
+
+.send__name {
+  width: 150px;
+  height: 30px;
+  border-radius: var(--border-radius-1);
+  margin-left: 0.5rem;
+}
+
+
+.ventanita {
+  display: none;
+  width: 450px;
+  height: 200px;
+  background-color: var(--color-background);
+  border-radius: var(--border-radius-2);
+  align-items: center;
+  justify-content: center;
+}
+
+.ventanita2 {
+  display: flex;
+  align-items: center;
+}
+
+
+.ventanita2 input {
+  padding: 0.66rem; 
+  border-radius: var(--border-radius-1);
+  background-color: #fff;
+}
+
+
+
+
+
+
 /* Aside */
 
 .side__full__section {
