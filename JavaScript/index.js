@@ -1,14 +1,15 @@
-const felipe = 123
 const sections = {
     work: document.querySelector(".work__active"),
     talent: document.querySelector(".talent__active"),
-    transation: document.querySelector(".transation__active")
+    transation: document.querySelector(".transation__active"),
+    aboutUs: document.querySelector(".about__us")
 };
 
 const buttons = {
     work: document.getElementById("trabajos"),
     talent: document.getElementById("talentos"),
-    transation: document.getElementById("transations")
+    transation: document.getElementById("transations"),
+    aboutUs: document.getElementById("quienes-somos")
 };
 
 const closeBtns = document.querySelectorAll(".cancel__button");
@@ -39,3 +40,13 @@ closeBtns.forEach(btn => {
 });
 
 startBtn.addEventListener("click", closeAllSections);
+
+
+const pay = document.getElementById("active__pay");
+const buttonPay = document.querySelector(".message__active");
+const exitPay = document.querySelector(".exit__pay");
+
+pay.addEventListener("click", () => {buttonPay.style.display = "flex"});
+exitPay.addEventListener("click", () => {buttonPay.style.display = "none"});
+
+

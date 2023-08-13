@@ -262,9 +262,37 @@ h4 {
   cursor: pointer;
 }
 
+.wallet__information {
+    display: grid;
+    grid-template-columns: 1fr auto; 
+    margin-right: 1rem;
+    background-color: #cbed4414;
+    border: 1px solid #000;
+    border-radius: var(--border-radius-2);
+    overflow: hidden;
+    max-width: max-content;
+}
+
+.wallet__information.expanded {
+    grid-template-columns: 1fr 1fr; /* Cambia a tamaño completo cuando está expandido */
+  }
+
+.wallet__information div {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0    ; /* Ajusta según tus necesidades */
+    text-overflow: ellipsis;
+    margin: auto;
+    color: #fff;
+    transition: width 0.3s ease;
+}
+
+.wallet__information.expanded div {
+    width: 6em; /* Aparece cuando está expandido */
+  }
+
 .wallet__key {
   padding: 0.55rem 0.96rem;
-  margin-right: 0.66rem;
   border-radius: var(--border-radius-2);
   background-color: var(--color-background);
   color: var(--color-primary);
@@ -272,6 +300,8 @@ h4 {
   font-size: 0.88rem;
   font-weight: 600;
   transition: 0.3s all ease;
+  border-left: 1px solid #000;
+
 }
 
 .input__nav__search {
@@ -880,6 +910,35 @@ aside .sidebar a:last-child {
 
 
 
+.grid__about {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.5rem;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+}
+
+.grid__item__about {
+    display: flex;
+    height: 350px;
+    width: 300px;
+    margin:auto;
+    flex-direction: column;
+    border: 1px solid #fff;
+    border-radius: var(--border-radius-2);
+}
+
+.grid__item__about img {
+    width: 4rem;
+    height: 4rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border:1px solid #fff;
+}
+
+
+
 /* hover And Transitions */
 
 .wallet__key:hover {
@@ -969,6 +1028,10 @@ aside .sidebar a:hover {
   box-shadow: 0 0 0.5rem 0.1rem var(--color-success);
 }
 
+.wallet__information div:hover {
+    transform: scale(1.1);
+    transition: .3s all ease;
+}
 
 
 
@@ -996,7 +1059,7 @@ aside .sidebar a:hover {
         margin-top: 0.2rem;
     }
 
-        
+
 
     .hero__title h1, .hero__title h1 span {
         font-size: 1.8rem;
