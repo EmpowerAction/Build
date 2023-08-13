@@ -1,309 +1,364 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EmpowerAction</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.5.2/web3.min.js"></script>
 
-    <link rel="stylesheet" href="../CSS/style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
-    rel="stylesheet">
-
-
-
-</head>
-<body>
-
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="container">
+      <!-- Nav Section -->
 
-
-        <!-- Nav Section -->
-
-        <nav class="nav">
-            <div class="toggle">
-                <div class="close" id="close-btn"><span class="material-icons-sharp">close</span></div>
-                <div class="logo">
-                    <img src="images/logo.png">
-                    <h2>Empower<span class="danger">Action</span></h2>
-                </div>
-            </div>
-
-            <div class="profile">
-                <button class="wallet__key" id="connectMetamaskButton">Wallet</button>
-                <div class="profile__name">
-                    <span>Hey,</span><h3>Santiago</h3>
-                </div>
-                <div class="profile__img">
-                    <img src="./img/face.png" alt="hey">
-                </div>
-            </div>
-
-        </nav>     
-
-        <!-- End of Nav -->
-
-
-        <!-- Body Section -->
-
-
-        <div class="body__structure">
-
-
-        <div class="hero__banner">
-            <h1>EmporwerAction</h1>
-            <p>Venta Y Compra De Camiones</p>
-            <a href="">Solicitar Presupuesto</a>
+      <nav class="nav">
+        <div class="toggle">
+          <div class="close" id="close-btn">
+            <span class="material-icons-sharp">close</span>
+          </div>
+          <div class="logo">
+            <img src="images/logo.png" />
+            <h2>Empower<span class="danger">Action</span></h2>
+          </div>
         </div>
 
+        <div class="profile">
+          <button class="wallet__key" id="connectMetamaskButton">Wallet</button>
+          <div class="profile__name">
+            <span>Hey,</span>
+            <h3>Santiago</h3>
+          </div>
+          <div class="profile__img">
+            <img src="./img/face.png" alt="hey" />
+          </div>
+        </div>
+      </nav>
 
+      <!-- End of Nav -->
 
+      <!-- Body Section -->
+
+      <div class="body__structure">
+        <div class="hero__banner">
+          <h1>EmporwerAction</h1>
+          <p>Venta Y Compra De Camiones</p>
+          <a href="">Solicitar Presupuesto</a>
+        </div>
 
         <!-- Sidebar Section -->
-      
-      
+
         <div class="side__full__section">
+          <aside>
+            <div class="sidebar">
+              <a href="#" id="start"
+                ><span class="material-icons-sharp">home</span>
+                <h3>Inicio</h3></a
+              >
+              <a href="#" id="trabajos"
+                ><span class="material-icons-sharp">work_outline</span>
+                <h3>Trabajos</h3></a
+              >
+              <a href="#" id="talentos"
+                ><span class="material-icons-sharp">person</span>
+                <h3>Talentos</h3></a
+              >
+              <a href="#" id="transations"
+                ><span class="material-icons-sharp"
+                  >published_with_changes</span
+                >
+                <h3>Transacciones</h3></a
+              >
+              <a href="#" id="logout"
+                ><span class="material-icons-sharp">logout</span>
+                <h3>Cerrar Sesion</h3></a
+              >
+            </div>
+          </aside>
 
+          <!-- End Aside -->
 
+          <!-- Seccion Trabajos -->
 
+          <div class="works work__active">
+            <div class="wrap__works">
+              <button class="cancel__button exit">X</button>
+              <div class="search__box">
+                <input
+                  type="text"
+                  placeholder="Buscar Trabajo..."
+                  class="search__input"
+                /><span class="material-icons-sharp search__input--i"
+                  >search</span
+                >
+              </div>
+              <div class="grid__works">
+                <div class="grid__column__work">
+                  <div class="grid__item__work">
+                    <img src="./img/face1.jpg" alt="" />
+                    <h4>Soledad Gimenez</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Ratione, debitis suscipit earum recusandae optio
+                      inventore!
+                    </p>
+                  </div>
 
+                  <div class="grid__item__work">
+                    <img src="./img/face2.jpg" alt="" />
+                    <h4>Soledad Gimenez</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Ratione, debitis suscipit earum recusandae optio
+                      inventore!
+                    </p>
+                  </div>
 
-
-
-            <aside>
-                <div class="sidebar">
-                    <a href="#" id="start"><span class="material-icons-sharp">home</span><h3>Inicio</h3></a>
-                    <a href="#" id="trabajos"><span class="material-icons-sharp">work_outline</span><h3>Trabajos</h3></a>
-                    <a href="#"  id="talentos"><span class="material-icons-sharp">person</span><h3>Talentos</h3></a>
-                    <a href="#" id="transations"><span class="material-icons-sharp">published_with_changes</span><h3>Transacciones</h3></a>
-                    <a href="#" id="logout"><span class="material-icons-sharp">logout</span><h3>Cerrar Sesion</h3></a>
+                  <div class="grid__item__work">
+                    <img src="./img/face4.jpg" alt="" />
+                    <h4>Soledad Gimenez</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Ratione, debitis suscipit earum recusandae optio
+                      inventore!
+                    </p>
+                  </div>
                 </div>
-            </aside>
 
-            <!-- End Aside -->
+                <div class="grid__column__work">
+                  <div class="grid__item__work">
+                    <img src="./img/face3.jpg" alt="" />
+                    <h4>Soledad Gimenez</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Ratione, debitis suscipit earum recusandae optio
+                      inventore!
+                    </p>
+                  </div>
+
+                  <div class="grid__item__work">
+                    <img src="./img/face7.jpg" alt="" />
+                    <h4>Soledad Gimenez</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Ratione, debitis suscipit earum recusandae optio
+                      inventore!
+                    </p>
+                  </div>
+
+                  <div class="grid__item__work">
+                    <img src="./img/face5.jpg" alt="" />
+                    <h4>Soledad Gimenez</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Ratione, debitis suscipit earum recusandae optio
+                      inventore!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- End Works Section -->
+
+          <div class="works talent__active">
+            <div class="wrap__works">
+              <button class="cancel__button exit">X</button>
+              <div class="search__box">
+                <input
+                  type="text"
+                  placeholder="Buscar Talentos..."
+                  class="search__input"
+                /><span class="material-icons-sharp search__input--i"
+                  >search</span
+                >
+              </div>
+              <div class="grid__works">
+                <div class="grid__column__work">
+                  <div class="grid__item__work">
+                    <img src="./img/face1.jpg" alt="" />
+                    <h4>Soledad Gimenez</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Ratione, debitis suscipit earum recusandae optio
+                      inventore!
+                    </p>
+                  </div>
+
+                  <div class="grid__item__work">
+                    <img src="./img/face2.jpg" alt="" />
+                    <h4>Soledad Gimenez</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Ratione, debitis suscipit earum recusandae optio
+                      inventore!
+                    </p>
+                  </div>
+
+                  <div class="grid__item__work">
+                    <img src="./img/face4.jpg" alt="" />
+                    <h4>Soledad Gimenez</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Ratione, debitis suscipit earum recusandae optio
+                      inventore!
+                    </p>
+                  </div>
+                </div>
+
+                <div class="grid__column__work">
+                  <div class="grid__item__work">
+                    <img src="./img/face3.jpg" alt="" />
+                    <h4>Soledad Gimenez</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Ratione, debitis suscipit earum recusandae optio
+                      inventore!
+                    </p>
+                  </div>
+
+                  <div class="grid__item__work">
+                    <img src="./img/face7.jpg" alt="" />
+                    <h4>Soledad Gimenez</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Ratione, debitis suscipit earum recusandae optio
+                      inventore!
+                    </p>
+                  </div>
+
+                  <div class="grid__item__work">
+                    <img src="./img/face5.jpg" alt="" />
+                    <h4>Soledad Gimenez</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Ratione, debitis suscipit earum recusandae optio
+                      inventore!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Transations -->
+          <div class="works transation__active">
+            <div class="wrap__works">
+              <button class="cancel__button exit">X</button>
 
 
 
-            <!-- Seccion Trabajos -->
+                <div class="chats__container">
 
+                    <div class="chat__inbox--container">
 
+                        <div class="grid__chat__box">
 
-            <div class="works work__active">
-                <div class="wrap__works">
-                    <button class="cancel__button exit">X</button>
-                    <div class="search__box">
-                        <input type="text" placeholder="Buscar Trabajo..." class="search__input"><span class="material-icons-sharp search__input--i">search</span>
-                    </div>
-                    <div class="grid__works">
-                        <div class="grid__column__work">
-
-                            <div class="grid__item__work">
-                                <img src="./img/face1.jpg" alt="">
-                                <h4>Soledad Gimenez</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, debitis suscipit earum recusandae optio inventore!</p>
+                            <div class="search__box--alt">
+                                <input type="text" placeholder="Buscar Mensaje..."><span class="material-icons-sharp">search</span>
                             </div>
 
-                            <div class="grid__item__work">
-                                <img src="./img/face2.jpg" alt="">
-                                <h4>Soledad Gimenez</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, debitis suscipit earum recusandae optio inventore!</p>
-                            </div>
-
-
-                            <div class="grid__item__work">
-                                <img src="./img/face4.jpg" alt="">
-                                <h4>Soledad Gimenez</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, debitis suscipit earum recusandae optio inventore!</p>
-                            </div>
-
-
-                        </div>
-
-
-                        <div class="grid__column__work">
-
-
-                            <div class="grid__item__work">
-                                <img src="./img/face3.jpg" alt="">
-                                <h4>Soledad Gimenez</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, debitis suscipit earum recusandae optio inventore!</p>
-                            </div>
-
-
-                            <div class="grid__item__work">
-                                <img src="./img/face7.jpg" alt="">
-                                <h4>Soledad Gimenez</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, debitis suscipit earum recusandae optio inventore!</p>
-                            </div>
-
-
-                            <div class="grid__item__work">
-                                <img src="./img/face5.jpg" alt="">
-                                <h4>Soledad Gimenez</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, debitis suscipit earum recusandae optio inventore!</p>
-                            </div>
-
+                            <div class="chat__inbox">
+                                <div class="chat__inbox__item">
+                                    <img src="" alt=""><p>Micaela</p><span>Hello</span>
+                                </div>
                                 
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-
-            <!-- End Works Section -->
-
-
-
-            <div class="works talent__active">
-                <div class="wrap__works">
-                    <button class="cancel__button exit">X</button>
-                    <div class="search__box">
-                        <input type="text" placeholder="Buscar Talentos..." class="search__input"><span class="material-icons-sharp search__input--i">search</span>
-                    </div>
-                    <div class="grid__works">
-                        <div class="grid__column__work">
-
-                            <div class="grid__item__work">
-                                <img src="./img/face1.jpg" alt="">
-                                <h4>Soledad Gimenez</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, debitis suscipit earum recusandae optio inventore!</p>
-                            </div>
-
-                            <div class="grid__item__work">
-                                <img src="./img/face2.jpg" alt="">
-                                <h4>Soledad Gimenez</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, debitis suscipit earum recusandae optio inventore!</p>
-                            </div>
-
-
-                            <div class="grid__item__work">
-                                <img src="./img/face4.jpg" alt="">
-                                <h4>Soledad Gimenez</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, debitis suscipit earum recusandae optio inventore!</p>
-                            </div>
-
-
-                        </div>
-
-
-                        <div class="grid__column__work">
-
-
-                            <div class="grid__item__work">
-                                <img src="./img/face3.jpg" alt="">
-                                <h4>Soledad Gimenez</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, debitis suscipit earum recusandae optio inventore!</p>
-                            </div>
-
-
-                            <div class="grid__item__work">
-                                <img src="./img/face7.jpg" alt="">
-                                <h4>Soledad Gimenez</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, debitis suscipit earum recusandae optio inventore!</p>
-                            </div>
-
-
-                            <div class="grid__item__work">
-                                <img src="./img/face5.jpg" alt="">
-                                <h4>Soledad Gimenez</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, debitis suscipit earum recusandae optio inventore!</p>
-                            </div>
-
+                                <div class="chat__inbox__item">
+                                    <img src="" alt=""><p>Micaela</p><span>Hello</span>
+                                </div>
                                 
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-            <!-- Transations -->
-
-
-            <div class="works transation__active">
-                <div class="wrap__works">
-                    <button class="cancel__button exit">X</button>
-                    <div class="search__box">
-                        <input type="text" placeholder="Buscar Trabajo..." class="search__input"><span class="material-icons-sharp search__input--i">search</span>
-                    </div>
-                    <div class="grid__works">
-                        <div class="grid__column__work">
-
-                            <div class="grid__item__work">
-                                <img src="./img/face1.jpg" alt="">
-                                <h4>Soledad Gimenez</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, debitis suscipit earum recusandae optio inventore!</p>
-                            </div>
-
-                            <div class="grid__item__work">
-                                <img src="./img/face2.jpg" alt="">
-                                <h4>Soledad Gimenez</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, debitis suscipit earum recusandae optio inventore!</p>
-                            </div>
-
-
-                            <div class="grid__item__work">
-                                <img src="./img/face4.jpg" alt="">
-                                <h4>Soledad Gimenez</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, debitis suscipit earum recusandae optio inventore!</p>
-                            </div>
-
-
-                        </div>
-
-
-                        <div class="grid__column__work">
-
-
-                            <div class="grid__item__work">
-                                <img src="./img/face3.jpg" alt="">
-                                <h4>Soledad Gimenez</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, debitis suscipit earum recusandae optio inventore!</p>
-                            </div>
-
-
-                            <div class="grid__item__work">
-                                <img src="./img/face7.jpg" alt="">
-                                <h4>Soledad Gimenez</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, debitis suscipit earum recusandae optio inventore!</p>
-                            </div>
-
-
-                            <div class="grid__item__work">
-                                <img src="./img/face5.jpg" alt="">
-                                <h4>Soledad Gimenez</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, debitis suscipit earum recusandae optio inventore!</p>
-                            </div>
-
+                                <div class="chat__inbox__item">
+                                    <img src="" alt=""><p>Micaela</p><span>Hello</span>
+                                </div>
                                 
+                                <div class="chat__inbox__item">
+                                    <img src="" alt=""><p>Micaela</p><span>Hello</span>
+                                </div>
+                                
+                                <div class="chat__inbox__item">
+                                    <img src="" alt=""><p>Micaela</p><span>Hello</span>
+                                </div>
+                            </div>
+
+
+
                         </div>
+
+
+
                     </div>
+
+
+                    <div class="chat__message">
+
+                        <div class="grid__chat__box__message">
+
+                            <div class="chat__message--top">
+                                <img src="" alt=""> <p>Micaela</p>
+                            </div>
+
+                            <div class="chat__center--inbox">
+                                <div class="chat__message--inbox--active"   >
+                                    <p class="chat__p__active">Liberar Transacion</p>
+                                </div>
+                                <div class="chat__message--inbox__right">
+                                    <p class="chat__p__right">Hello</p>
+                                </div>
+                                <div class="chat__message--inbox">
+                                    <p class="chat__p__left">Hello</p>
+                                </div>
+                                <div class="chat__message--inbox__right">
+                                    <p class="chat__p__right">Hello</p>
+                                </div>
+                                <div class="chat__message--inbox">
+                                    <p class="chat__p__left">Hello</p>
+                                </div>
+                                <div class="chat__message--inbox__right">
+                                    <p class="chat__p__right">Hello</p>
+                                </div>
+                            </div>
+
+
+                            <div class="chat__message__bottom">
+                                <input type="text" placeholder="Enviar mensaje..."><span class="material-icons-sharp">send</span>
+                            </div>
+
+
+
+                        </div>
+
+
+
+                    </div>
+
+
+
                 </div>
+
+
+
+
+
+
+
+
+
+
+
             </div>
-
-
-
-
-
-
-
-
-            </div>
-
+          </div>
         </div>
-
+      </div>
     </div>
 
-
-    <script src="../JavaScript/index.js"></script>  
+    <script src="../JavaScript/index.js"></script>
     <script src="../JavaScript/contract.js"></script>
-</body>
+  </body>
 </html>
