@@ -38,9 +38,15 @@ contract JobMarket {
         jobCount++;
     }
 
+    function checkUser(address _address) public view returns (bool) {
+        return Users[_address].UserAddress != address(0);
+    }
+
     function getJob(uint256 _jobId) public view returns (address, string memory, uint256, string memory) {
         Job memory job = jobs[_jobId];
         return (job.user.UserAddress, job.user.name, job.price, job.name);
     }
 }
+
+
 
