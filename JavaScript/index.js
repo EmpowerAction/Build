@@ -12,19 +12,17 @@ const buttons = {
     aboutUs: document.getElementById("quienes-somos")
 };
 
-const closeBtns = document.querySelectorAll(".cancel__button");
-const startBtn = document.getElementById("start");
 const heroBanner = document.querySelector(".hero__banner");
 
 function closeAllSections() {
     for (let section in sections) {
         sections[section].style.display = 'none';
-        heroBanner.style.zIndex = "900";
     }
+    heroBanner.style.zIndex = "900";
 }
 
 function openSection(sectionName) {
-    closeAllSections(); // Cierra todas las secciones primero
+    closeAllSections();
     if (sections[sectionName]) {
         sections[sectionName].style.display = 'block';
         heroBanner.style.zIndex = "0";
@@ -32,55 +30,38 @@ function openSection(sectionName) {
 }
 
 for (let button in buttons) {
-    buttons[button].addEventListener("click", () => { openSection(button); });
+    buttons[button].addEventListener("click", () => openSection(button));
 }
 
-closeBtns.forEach(btn => {
+document.querySelectorAll(".cancel__button").forEach(btn => {
     btn.addEventListener("click", closeAllSections);
 });
 
-startBtn.addEventListener("click", closeAllSections);
+document.getElementById("start").addEventListener("click", closeAllSections);
 
-
-const pay = document.getElementById("active__pay");
+// Payment section
 const buttonPay = document.querySelector(".message__active");
-const exitPay = document.querySelector(".exit__pay");
-
-pay.addEventListener("click", () => {buttonPay.style.display = "flex"});
-exitPay.addEventListener("click", () => {buttonPay.style.display = "none"});
-
-
-const reg = document.getElementById("register");
-const ventanita = document.querySelector(".ventanita");
-
-reg.addEventListener("click", () => {
-    ventanita.style.display = "flex"
+document.getElementById("active__pay").addEventListener("click", () => {
+    buttonPay.style.display = "flex";
+});
+document.querySelector(".exit__pay").addEventListener("click", () => {
+    buttonPay.style.display = "none";
 });
 
-const getJob = document.getElementById("getJob");
-const jobWindow = document.querySelector(".job__window");
-const exitClose = document.querySelector(".exitClose")
+// Register section
+const ventanita = document.querySelector(".ventanita");
+document.getElementById("register").addEventListener("click", () => {
+    ventanita.style.display = "flex";
+});
+document.querySelector(".exit__register").addEventListener("click", () => {
+    ventanita.style.display = "none";
+});
 
-getJob.addEventListener("click", () => {
+// Job section
+const jobWindow = document.querySelector(".job__window");
+document.getElementById("getJob").addEventListener("click", () => {
     jobWindow.style.zIndex = "2";
 });
-
-exitClose.addEventListener("click", () => {
+document.querySelector(".exitClose").addEventListener("click", () => {
     jobWindow.style.zIndex = "-1";
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

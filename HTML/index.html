@@ -101,11 +101,14 @@
           </div>
           <div class="ventanita">
             <div class="ventanita2">
-              <input type="text" id="nombreInput" placeholder="Nombre">
-              <button class="send__name" onclick="guardarNombre()">Enviar</button>
+              <h4>Registrarse</h4>
+              <button class="cancel__post exit__register">X</button>
+              <div class="flex__windows__register">
+                  <input type="text" id="nombreInput" placeholder="Nombre">
+                  <button class="send__name" onclick="guardarNombre()">Enviar</button>
+              </div>
             </div>
           </div>
-          <div class="hero__presentation"></div>
         </div>
 
 
@@ -162,8 +165,8 @@
                   <div class="job__input">
                     <h4>Postular Trabajo</h4>
                     <button class="cancel__post exitClose">X</button>
-                    <input type="text" placeholder="Nombre..." id="jobName">
-                    <input type="text" placeholder="Precio.." id="jobPrice">
+                    <input type="text" placeholder="Nombre..." required id="jobName">
+                    <input type="text" placeholder="Precio.." required id="jobPrice">
                     <button class="post__button" id="postJob">Publicar</button>
                   </div>
               </div>

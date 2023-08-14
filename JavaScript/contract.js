@@ -48,12 +48,15 @@ function displayAccountNumber(account) {
 let jobName;
 let jobPrice;
 
-
 function jobInfo() {
-    jobName = document.getElementById("JobName").value;
+    jobName = document.getElementById("jobName").value;
     jobPrice = document.getElementById("jobPrice").value;
-    return
+    
+    document.getElementById("jobName").value = "";
+    document.getElementById("jobPrice").value = "";
 }
+
+document.getElementById("postJob").addEventListener("click", jobInfo);
 
 
 
