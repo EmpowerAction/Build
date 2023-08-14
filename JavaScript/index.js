@@ -56,3 +56,31 @@ const ventanita = document.querySelector(".ventanita");
 reg.addEventListener("click", () => {
     ventanita.style.display = "flex"
 });
+
+const getJob = document.getElementById("getJob");
+const jobWindow = document.querySelector(".job__window");
+const exitClose = document.querySelector(".exitClose")
+
+getJob.addEventListener("click", () => {
+    jobWindow.style.zIndex = "2";
+});
+
+exitClose.addEventListener("click", () => {
+    jobWindow.style.zIndex = "-1";
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
