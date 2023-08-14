@@ -2,14 +2,12 @@ const sections = {
     work: document.querySelector(".work__active"),
     talent: document.querySelector(".talent__active"),
     transation: document.querySelector(".transation__active"),
-    aboutUs: document.querySelector(".about__us")
 };
 
 const buttons = {
     work: document.getElementById("trabajos"),
     talent: document.getElementById("talentos"),
     transation: document.getElementById("transations"),
-    aboutUs: document.getElementById("quienes-somos")
 };
 
 const heroBanner = document.querySelector(".hero__banner");

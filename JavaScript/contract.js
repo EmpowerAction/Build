@@ -74,8 +74,19 @@ async function initializeContract() {
 
 let nombreUsuario; 
 
-function guardarNombre() {
+async function guardarNombre() {
+
+    const account = await getAccount();
+    if (!account) {
+      alert("Por favor, conecta tu wallet de MetaMask para continuar.");
+      return;
+  }
+  
     nombreUsuario = document.getElementById('nombreInput').value;
+    document.getElementById('userNameContainer').style.display = 'flex';
+    document.getElementById('userNameDisplay').textContent = nombreUsuario;
+    document.getElementById("register").style.display = "none";
+    document.querySelector(".ventanita").style.display = "none";
     console.log('nombre', nombreUsuario);
     registerUser(nombreUsuario)
     return;

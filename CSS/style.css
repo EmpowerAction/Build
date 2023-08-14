@@ -261,7 +261,7 @@ p {
 }
 
 .profile__name {
-  display: flex;
+  display: none;
   margin-right: 1.2rem;
   font-size: 0.86rem;
   cursor: pointer;
