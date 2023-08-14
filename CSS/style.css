@@ -453,7 +453,7 @@ h4 {
 
 
 .ventanita {
-  display: none;
+  display: flex;
   width: 450px;
   height: 200px;
   background-color: var(--color-background);
