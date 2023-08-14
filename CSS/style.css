@@ -337,7 +337,7 @@ h4 {
 .hero__banner {
   top: 35%;
   left: 20%;
-  width: 90%;
+  width: 100%;
   height: 70%;
   position: absolute;
   z-index: 900;
@@ -368,7 +368,8 @@ h4 {
 .hero__title h1 span {
   background: linear-gradient(to right, #1b9c85, #ff0060);
   background-clip: text;
-  color: transparent;
+  -webkit-background-clip: text;
+  color:transparent;
 }
 
 /* CSS */
@@ -560,7 +561,32 @@ aside .sidebar a:last-child {
   margin: auto;
 }
 
-.cancel__button {
+
+.post__job {
+  position: absolute;
+  top: 0.55rem;
+  right: 5rem;
+  padding: 0.66rem;
+  border-radius: var(--border-radius-2);
+  color: var(--color-primary);
+  background-color: var(--color-dark);
+  margin: auto;
+  cursor: pointer;
+}
+
+.job__window {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+
+
+.cancel__post {
   position: absolute;
   width: fit-content;
   height: fit-content;
@@ -574,6 +600,65 @@ aside .sidebar a:last-child {
   transition: 0.3s all ease;
   border: 1px solid #181a1e;
 }
+
+
+
+.job__input {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-dark);
+  border-radius: var(--border-radius-2);
+  position: relative;
+}
+
+.job__input h4 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  position: absolute;
+  top: 0.55rem;
+}
+
+.job__input input {
+  margin: 1rem;
+  padding: 0.66rem;
+  background-color: #210246;
+  color: var(--color-primary);
+  border-radius: var(--border-radius-1);
+}
+
+.post__button {
+  padding: 0.66rem;
+  font-size: 1rem;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border-radius: var(--border-radius-1);
+  position: absolute;
+  bottom: .55rem;
+  right: 1.2rem;
+  cursor: pointer;
+}
+
+
+.cancel__button {
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  top: 0.55rem;
+  right: 1.7rem;
+  padding: 0.66rem 0.88rem;
+  border-radius: 50%;
+  background-color: var(--color-dark);
+  color: var(--color-dark-variant);
+  cursor: pointer;
+  transition: 0.3s all ease;
+  border: 1px solid #181a1e;
+
+}
+
 
 .search__box {
   position: absolute;
@@ -1045,6 +1130,13 @@ aside .sidebar a:hover {
   transition: 0.3s all ease;
   box-shadow: 0 0 0.5rem 0.1rem var(--color-danger);
 }
+
+.cancel__post:hover {
+  transform: scale(1.1);
+  transition: 0.3s all ease;
+  box-shadow: 0 0 0.5rem 0.1rem var(--color-danger);
+}
+
 
 .exit__pay:hover {
   transform: scale(1.1);

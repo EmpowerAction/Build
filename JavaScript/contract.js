@@ -25,6 +25,18 @@ function displayAccountNumber(account) {
 }
 
 
+let jobName;
+let jobPrice;
+
+
+function jobInfo() {
+    jobName = document.getElementById("JobName").value;
+    jobPrice = document.getElementById("jobPrice").value;
+    return
+}
+
+
+
 async function initializeContract() {
   const contractABIRequest = await fetch('../out/EmpowerAction.sol/JobMarket.json'); // ABI from your compiled contract
   const contractABI = await contractABIRequest.json();
@@ -35,6 +47,8 @@ async function initializeContract() {
 
   const jobStatus = await contract.methods.getJobStatus(0).call();
   console.log('Result:', jobStatus );
+}
+
 
 //  contract.methods.YourFunction(parameters).send({ from: userAddress })
 //    .on('transactionHash', hash => console.log('Transaction Hash:', hash))
@@ -44,7 +58,7 @@ async function initializeContract() {
 //  contract.events.YourEvent()
 //    .on('data', event => console.log('Event:', event))
 //    .on('error', console.error);
-}
+
 
 
 
