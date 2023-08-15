@@ -48,12 +48,23 @@ function displayAccountNumber(account) {
 let jobName;
 let jobPrice;
 
-function jobInfo() {
+async function jobInfo() {
+
+    const account = await getAccount();
+    if (!account) {
+      alert("Por favor, conecta tu wallet de MetaMask para continuar.");
+      return;
+  }
+
+
     jobName = document.getElementById("jobName").value;
     jobPrice = document.getElementById("jobPrice").value;
     
     document.getElementById("jobName").value = "";
     document.getElementById("jobPrice").value = "";
+    await window.contract.methods.postJob(jobName, jobPrice).send({from:account});
+
+
 }
 
 document.getElementById("postJob").addEventListener("click", jobInfo);
@@ -97,6 +108,7 @@ async function registerUser(name) {
     console.log('account:',account)
     await window.contract.methods.registerUser(name).send({from:account});
 }
+
 
 async function checkUser(address) {
     const checkedUser = await window.contract.methods.checkUser(address).call();
