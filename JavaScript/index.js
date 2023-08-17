@@ -63,3 +63,29 @@ document.getElementById("getJob").addEventListener("click", () => {
 document.querySelector(".exitClose").addEventListener("click", () => {
     jobWindow.style.zIndex = "-1";
 });
+
+
+const activeWork  = document.getElementById("activeWork");
+
+
+
+// Responsive 
+
+
+const responsiveAside = document.querySelector(".responsiveToggle");
+const asideSection = document.querySelector(".aside");
+
+
+responsiveAside.addEventListener("click", () => {
+    if(asideSection.classList.contains("hide")){
+        asideSection.classList.remove("hide");
+        asideSection.classList.add("show");
+    }else {
+        asideSection.classList.remove("show");
+        asideSection.classList.add("hide");
+    }
+});
+
+
+
+
