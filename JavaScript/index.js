@@ -88,6 +88,25 @@ function jobInput() {
 }
 
 
+document.getElementById('active__pay').addEventListener('click', function() {
+    if (typeof window.ethereum !== 'undefined') {
+        window.ethereum.request({
+            method: 'eth_sendTransaction',
+            params: [{
+                from: window.ethereum.selectedAddress, // dirección del remitente
+                to: '0xd82032ad30a0F09b82783F49a0b58227a8E6d560', // dirección del destinatario
+                value: '14000000000000000000' // cantidad en wei
+            }],
+        }).catch((error) => {
+            console.error(error);
+            alert('Hubo un error al intentar realizar el pago.');
+        });
+    } else {
+        alert('Cartera de Ethereum no detectada!');
+    }
+});
+
+
 
 
 

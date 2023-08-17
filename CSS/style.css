@@ -858,6 +858,10 @@ aside .sidebar a:last-child {
   font-size: 1.2rem;
 }
 
+.hover__chat__main {
+  background-color: #e5e2e2;
+}
+
 .chat__inbox__item:hover {
   background-color: #f2f2f2;
 }
