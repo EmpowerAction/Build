@@ -42,9 +42,7 @@ const buttonPay = document.querySelector(".message__active");
 document.getElementById("active__pay").addEventListener("click", () => {
     buttonPay.style.display = "flex";
 });
-document.querySelector(".exit__pay").addEventListener("click", () => {
-    buttonPay.style.display = "none";
-});
+
 
 // Register section
 const ventanita = document.querySelector(".ventanita");
@@ -66,6 +64,26 @@ document.querySelector(".exitClose").addEventListener("click", () => {
 
 
 const activeWork  = document.getElementById("activeWork");
+
+
+
+
+const jobPost = document.getElementById("postJob");
+
+jobPost.addEventListener("click", jobInput);
+
+function jobInput() {
+    const inputJobName = document.getElementById("inputJobName").value;
+    const inputJobPrice = document.getElementById("inputJobPrice").value;
+    let displayJobName = document.getElementById("displayJobName");
+    let displayJobPrice = document.getElementById("displayJobPrice");
+    displayJobName.textContent = inputJobName;
+    displayJobPrice.textContent = "$" + inputJobPrice;
+}
+
+
+
+
 
 
 

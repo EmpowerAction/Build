@@ -148,14 +148,14 @@
           <div class="works work__active">
             <div class="wrap__works">
               <button class="cancel__button exit">X</button>
-              <button class="post__job" id="getJob">Publicar Trabajo</button>
+              <button  class="post__job" id="getJob">Publicar Trabajo</button>
               <div class="job__window">
                   <div class="job__input">
                     <h4>Postular Trabajo</h4>
                     <button class="cancel__post exitClose">X</button>
-                    <input type="text" placeholder="Nombre..." required id="jobName">
-                    <input type="text" placeholder="Precio.." required id="jobPrice">
-                    <button class="post__button" id="postJob">Publicar</button>
+                    <input type="text" placeholder="Nombre..." required id="inputJobName">
+                    <input type="text" placeholder="Precio.." required id="inputJobPrice">
+                    <button class="post__button" onclick="jobInfo()" id="postJob">Publicar</button>
                   </div>
               </div>
 
@@ -171,13 +171,12 @@
               <div class="grid__works">
                 <div class="grid__column__work">
                   <div class="grid__item__work">
-                    <img src="./img/face1.jpg" alt="" />
-
-                        <h4 id="jobName">Soledad Gimenez</h4>
-                        <p id="jobDescription">
+                    <img src="./img/face1.jpg" alt="" class="jobImg"/>
+                        <h4 id="displayJobName" class="jobChangeName">Sol</h4>
+                        <p id="jobDescription" class="jobDescription">
                           Lorem ipsum dolor sit amet consectetur
                         </p>
-                        <p id="jobPrice">2500$</p>
+                        <p id="displayJobPrice" class="jobPrice">$</p>
                   </div>
 
                   <div class="grid__item__work">
@@ -354,8 +353,8 @@
           <div class="chat__message">
               <div class="grid__chat__box__message">
                   <div class="chat__message--top">
-                      <img src="" alt="" />
-                      <p>Micaela</p>
+                      <img src="../HTML/img/avatar.png" alt="" />
+                      <p>Soledad</p>
                   </div>
 
                   <div class="chat__center--inbox">
@@ -383,18 +382,14 @@
 
                     <div class="chat__message__bottom">
                         <input type="text" placeholder="Enviar mensaje..." /><span
-                        class="material-icons-sharp"
+                        class="material-icons-sharp send__message"
                         >send</span>
                     </div>
                    </div>
                   </div>
                 </div>
+              </div>      
 
-                  <div class="message__active">
-                    <button class="exit__pay">X</button>
-                    <button class="confirm__pay">Confirmar Pago</button>
-                  </div>
-                  </div>
 
       
 
