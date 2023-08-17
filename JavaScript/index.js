@@ -73,12 +73,18 @@ const jobPost = document.getElementById("postJob");
 jobPost.addEventListener("click", jobInput);
 
 function jobInput() {
-    const inputJobName = document.getElementById("inputJobName").value;
+    const inputJobDescription = document.getElementById("inputJobDescription").value;
     const inputJobPrice = document.getElementById("inputJobPrice").value;
-    let displayJobName = document.getElementById("displayJobName");
+    const imgChange = "../HTML/img/face.png";
+    let nombreUsuario = document.getElementById('nombreInput').value;
+    let displayJobName = document.getElementById("displayJobDescription");
     let displayJobPrice = document.getElementById("displayJobPrice");
-    displayJobName.textContent = inputJobName;
-    displayJobPrice.textContent = "$" + inputJobPrice;
+    let displayName = document.getElementById("displayJobName");
+    let displayImg = document.getElementById("jobImg");
+    displayName.innerText = nombreUsuario
+    displayJobName.innerText = inputJobDescription;
+    displayJobPrice.textContent = "ETH " + inputJobPrice;
+    displayImg.src = imgChange;
 }
 
 
