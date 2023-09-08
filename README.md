@@ -25,7 +25,6 @@ El documento presenta una sofisticada arquitectura para un ecosistema financiero
     - [Utils](#utils)
   - [Migrations](#migrations)
 - [Licencia](#licencia)
-- [Contribución](#contribución)
 
 ## Introducción
 
@@ -496,48 +495,12 @@ Pruebas para validar las operaciones matemáticas más complejas proporcionadas 
 TestMoreMath.testComplexOperation();
 ```
 
-## Migrations
-
-La carpeta `migrations` contiene scripts de migración escritos en JavaScript para desplegar los contratos en la blockchain usando Truffle.
-
-#### 1_initial_migration.js
-
-Script para la migración inicial. Prepara el entorno de migración.
-
-```javascript
-// Ejemplo de uso
-truffle migrate --reset
-```
-
-#### 2_deploy_contracts.js
-
-Script para desplegar todos los contratos principales.
-
-```javascript
-// Ejemplo de uso
-truffle migrate --reset
-```
-
-#### 3_deploy_pool.js
-
-Script para desplegar el pool de liquidez.
-
-```javascript
-// Ejemplo de uso
-truffle migrate --reset
-```
-
-#### 4_deploy_feeds.js
-
-Script para desplegar feeds como oráculos o fuentes de datos.
-
-```javascript
-// Ejemplo de uso
-truffle migrate --reset
-```
-
 
 ## Licencia
 
-## Contribución
+SPDX-License-Identifier: LGPL-3.0
+
+EmpowerAction - Copyright (C) 2023 Santiago Canepa | Sebastian Leandro | Victoria Quiroga
+This project is licensed under the GNU Lesser General Public License, Version 3 (LGPL-3.0). See the file LICENSE.md for more details.
+
 
