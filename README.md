@@ -1,4 +1,8 @@
-# EmpowerAction
+<p align="center">
+  <img src="https://github.com/EmpowerAction/Front-End/blob/master/img/icono/1.png" alt="Icono de la Plataforma" width="1200"/>
+</p>
+
+# EmpowerAction : Conectando las Finanzas Descentralizadas con la Actividad Real
 
 El documento presenta una sofisticada arquitectura para un ecosistema financiero descentralizado, EmpowerAction. Se centra en la dinámica de un mercado de empleos descentralizado, intercambiando a traves activos criptográficos y los mecanismos de crédito.
 
